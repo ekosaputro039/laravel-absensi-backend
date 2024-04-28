@@ -47,6 +47,8 @@ class UserController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'role' => $request->role,
+            'position' => $request->position,
+            'department' => $request->department,
             'password'=> Hash::make($request->password),
         ]);
 
@@ -82,6 +84,8 @@ class UserController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'role' => $request->role,
+            'position' => $request->position,
+            'department' => $request->department,
         ]);
 
         if ($request->password) {
