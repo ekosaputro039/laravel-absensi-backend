@@ -21,5 +21,16 @@ class DatabaseSeeder extends Seeder
             'email' => 'eko@fic16.com',
             'password' => Hash::make('12345678'),
         ]);
+
+        \App\Models\Company::create([
+            'name' =>'UPT TUBAN',
+            'email' =>'upt@gmail.com',
+            'address' => 'Jl. Mojopahit NO.100 Sidorejo Kec. Tuban Kab. Tuban',
+            'latitude' => '-7.747833',
+            'longitude' => '110.355398',
+            'radius_km' => '0.5',
+            'time_in' => '07:00',
+            'time_out' => '17:00',
+        ]);
     }
 }
