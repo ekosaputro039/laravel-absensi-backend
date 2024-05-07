@@ -18,4 +18,12 @@ class AttendanceController extends Controller
             })->orderBy('id', 'desc')->paginate(10);
         return view('pages.absensi.index', compact('attendances'));
     }
+
+    //edit
+        // Metode untuk menampilkan formulir pengeditan data kehadiran
+        public function edit($id)
+        {
+            $attendance = Attendance::findOrFail($id); // Menemukan data kehadiran berdasarkan ID
+            return view('pa', compact('attendance')); // Menampilkan formulir pengeditan dengan data kehadiran yang ditemukan
+        }
 }
